@@ -99,16 +99,16 @@ rapport:
 
 # Lancement des démos
 demo-1: $(BIN_DEMO)
-	ifeq ("$(ligne)","")
-		@echo "Utilisation make demo-1 ligne=X col=X"
-	else
-		ifeq ("$(col)","")
-			@echo "Utilisation make demo-1 ligne=X col=X"
-		else
-			@./bin/demo/1-colimacon $(ligne) $(col)
-		endif
-	endif
-	@echo "\n\nDémo terminé"
+ifndef ligne
+	@echo "Utilisation: make demo-1 ligne=X col=X"
+else
+ifndef col
+	@echo "Utilisation: make demo-1 ligne=X col=X"
+else
+		@./bin/demo/1-colimacon $(ligne) $(col)
+		@echo "\n\nDémo terminé"
+endif
+endif
 
 demo-2: $(BIN_DEMO)
 	@./bin/demo/2-horizontal
@@ -121,3 +121,17 @@ demo-3: $(BIN_DEMO)
 demo-4: $(BIN_DEMO)
 	@./bin/demo/4-carre
 	@echo "\n\nDémo terminé"
+
+demo-5: $(BIN_DEMO)
+ifndef ligne
+	@echo "Utilisation: make demo-5 ligne=X col=X"
+else
+ifndef col
+	@echo "Utilisation: make demo-5 ligne=X col=X"
+else
+		@./bin/demo/1-colimacon $(ligne) $(col)
+		@echo "\n\nDémo terminé"
+endif
+endif
+
+
