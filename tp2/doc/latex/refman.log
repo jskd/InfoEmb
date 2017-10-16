@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.10.14)  14 OCT 2017 22:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.10.14)  16 OCT 2017 23:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1217,12 +1217,16 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
-)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 59.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 59.
+ [1])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
 Package hyperref Info: Option `pageanchor' set `true' on input line 136.
- (./md_src_README.tex
+ (./md_README.tex
 LaTeX Font Info:    Try loading font information for TS1+phv on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
@@ -1230,19 +1234,23 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 3.
-) (./annotated.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 1.
+(Font)              scaled to size 10.79993pt on input line 17.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 10.79993pt on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 3.
-
-[1]) (./files.tex) (./structbuf.tex
+(Font)              scaled to size 10.79993pt on input line 17.
+ [1]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 37.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 37.
+)
+(./md_src_README.tex) (./annotated.tex) (./files.tex [2]) (./structborne.tex
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 8.99994pt on input line 8.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -1251,118 +1259,81 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 12.
- [2]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 28.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+[3]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 41.
-) (./bdd_8c.tex)
-(./bdd_8h.tex [3]
-LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 19.
-LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 19.
+(Font)              scaled to size 7.19995pt on input line 29.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 29.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+))
+(./structcurseur.tex [4]) (./README_8md.tex
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 40.
+(Font)              scaled to size 6.29996pt on input line 1.
+) (./src_2README_8md.tex)
+(./colimacon_8c.tex) (./colimacon_8h.tex
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 9.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 9.
+ [5]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 41.
- [4] [5]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 1 on input line 47.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 21.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 2 on input line 58.
+(longtable)                in table 1 on input line 33.
 
 
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3 on input line 73.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 4 on input line 86.
-
-
-Underfull \hbox (badness 10000) detected at line 87
+Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2 on input line 55.
+
+
+Overfull \vbox (12.0267pt too high) has occurred while \output is active []
+
 
 [6]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 5 on input line 106.
+(longtable)                in table 3 on input line 74.
 
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 111.
+) (./1-colimacon_8c.tex) (./2-horizontal_8c.tex [7]) (./3-vertical_8c.tex)
+(./4-carre_8c.tex [8]) (./5-colimacon-no-print_8c.tex)
+(./6-colimacon-time_8c.tex [9]) (./1-1x1_8c.tex) (./2-1x10_8c.tex [10])
+(./3-10x1_8c.tex) (./4-10x2_8c.tex [11]) (./5-2x10_8c.tex) (./6-10x10_8c.tex
+[12]) (./7-1000x1000_8c.tex) [13] [14
 
-Package longtable Warning: Column widths have changed
-(longtable)                in table 6 on input line 131.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7 on input line 148.
-
-[7]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 8 on input line 165.
-
-
-Underfull \hbox (badness 10000) detected at line 183
-[][][]
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 10 on input line 200.
-
-[8]
-Underfull \hbox (badness 10000) detected at line 218
-[][][]
- []
-
-) (./hexdump_8c.tex) (./hexdump_8h.tex) (./quicksort_8c.tex [9])
-(./quicksort_8h.tex [10]) (./1-natural-join_8c.tex
-Overfull \hbox (55.76048pt too wide) in paragraph at lines 29--1
-[]\T1/phv/m/n/10 Remarques []: Ce fichier a été récuprer du site[]: [][]\T1/pcr
-/m/n/10 http[]://www.[]zentut.[]com/c-tutorial/c-quicksort-algorithm/[][]
- []
-
-[11]) (./2-merge-join_8c.tex) (./README_8md.tex) (./storeFileBuffer_8c.tex)
-[12]
+]
 No file refman.ind.
 
 Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
 (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: C64566C23F9A30FDE9CC11B76FB28711;6750.
+(rerunfilecheck)             Checksum: 7FA03F43AD9FDD18CF89FC2515D3446D;11334.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
- 15120 strings out of 494945
- 214721 string characters out of 6181031
- 308438 words of memory out of 5000000
- 18010 multiletter control sequences out of 15000+600000
- 53873 words of font info for 77 fonts, out of 8000000 for 9000
+ 15176 strings out of 494945
+ 215903 string characters out of 6181031
+ 304644 words of memory out of 5000000
+ 18018 multiletter control sequences out of 15000+600000
+ 53498 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,14n,92p,735b,628s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,92p,843b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1372,10 +1343,10 @@ rier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (13 pages, 112240 bytes).
+Output written on refman.pdf (16 pages, 107487 bytes).
 PDF statistics:
- 435 PDF objects out of 1000 (max. 8388607)
- 406 compressed objects within 5 object streams
- 120 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 361 words of extra memory for PDF output out of 10000 (max. 10000000)
 

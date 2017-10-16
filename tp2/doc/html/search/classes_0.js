@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buf',['buf',['../structbuf.html',1,'']]]
+  ['borne',['borne',['../structborne.html',1,'']]]
 ];

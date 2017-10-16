@@ -1,21 +1,17 @@
-Ce projet a été conçu pour fonctionner avec make
-
-Il est recommandé pour les utilisateurs n\textquotesingle{}aimant pas le terminal de manipuler le projet uniquement avec {\bfseries eclipse}
-
-Des {\itshape builds targets} sont configurés, il suffit de double cliquer dessus pour lancer la commande make correspondante
-
-\subsection*{Commandes}
-
 
 \begin{DoxyItemize}
 \item {\bfseries make all} \+: Compile tout les fichiers
 \item {\bfseries make test} \+: Lancement de la série de tests automatiques
+\item {\bfseries make lib} \+: Génération de la bibliothéque static et dynamique
 \item {\bfseries make doc} \+: Génération de la documentation (doxygen)
 \item {\bfseries make rapport} \+: Génération du rapport (latex)
 \item {\bfseries make clean} \+: Nettoyage du projet (supression des objets et binaires)
-\item {\bfseries make demo-\/tp1}\+: Lancer la démo tp1
-\item {\bfseries make demo-\/tp2}\+: Lancer la démo tp2
-\item {\bfseries make rm-\/rs}\+: Supprime le fichier res/\+R\+S.\+txt
+\item {\bfseries make demo-\/1 ligne=X col=X} \+: Lancer la démo colimacon
+\item {\bfseries make demo-\/2}\+: Lancer la démo horizontal
+\item {\bfseries make demo-\/3}\+: Lancer la démo vertical
+\item {\bfseries make demo-\/4}\+: Lancer la démo carr
+\item {\bfseries make demo-\/5 ligne=X col=X} \+: Lancer la démo colimacon sans print (utile pour le bench)
+\item {\bfseries make demo-\/6 ligne=X col=X} \+: Lancer la démo colimacon avec sortie temps (utile pour le bench)
 \end{DoxyItemize}
 
 \subsection*{Arborescence}
@@ -27,6 +23,7 @@ Des {\itshape builds targets} sont configurés, il suffit de double cliquer dess
 \item {\bfseries demo} \+: Exécutable de démonstration
 \item {\bfseries test} \+: Exécutable de test
 \end{DoxyItemize}
+\item {\bfseries lib} \+: Bibliothéque
 \item {\bfseries doc} \+: Documentation doxygen sous differents formats
 \item {\bfseries rapport} \+: Source du rapport
 \item {\bfseries res} \+: Ressources necessaire au projet (fichier de bdd)
@@ -46,10 +43,11 @@ Des {\itshape builds targets} sont configurés, il suffit de double cliquer dess
 
 
 \begin{DoxyItemize}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
+\item colimacon 1x1
+\item colimacon 1x10
+\item colimacon 10x1
+\item colimacon 10x2
+\item colimacon 2x10
+\item colimacon 10x10
+\item colimacon 1000x1000 (sans print) 
 \end{DoxyItemize}

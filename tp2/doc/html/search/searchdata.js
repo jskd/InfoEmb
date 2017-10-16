@@ -1,11 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "12abchmnqrsvw",
-  1: "b",
-  2: "12bhqrs",
-  3: "bchmnqsw",
-  4: "csv",
-  5: "an"
+  0: "1234567bcdghlmnpr",
+  1: "bc",
+  2: "1234567cr",
+  3: "cdmp",
+  4: "bcdghl",
+  5: "d",
+  6: "bdgh",
+  7: "cn"
 };
 
 var indexSectionNames =
@@ -15,7 +17,9 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "pages"
+  5: "enums",
+  6: "enumvalues",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +29,8 @@ var indexSectionLabels =
   2: "Fichiers",
   3: "Fonctions",
   4: "Variables",
-  5: "Pages"
+  5: "Énumérations",
+  6: "Valeurs énumérées",
+  7: "Pages"
 };
 

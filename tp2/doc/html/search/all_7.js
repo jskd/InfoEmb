@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['navigation',['Navigation',['../md_src_README.html',1,'']]],
-  ['natural_5fjoin',['natural_join',['../bdd_8c.html#a47663e52ec01d5e1fd6d6a0c318b7a6b',1,'natural_join(const struct buf *buf_a, const struct buf *buf_b, struct buf *buf_out):&#160;bdd.c'],['../bdd_8h.html#a47663e52ec01d5e1fd6d6a0c318b7a6b',1,'natural_join(const struct buf *buf_a, const struct buf *buf_b, struct buf *buf_out):&#160;bdd.c']]]
+  ['bas',['BAS',['../colimacon_8c.html#ae9ae980041e438eed7a3af43ce4e9f6ba4b07baad9e862178efeac3e522475caa',1,'colimacon.c']]],
+  ['basse',['basse',['../structborne.html#a9bac7417a79567f0367c10b2eda3085e',1,'borne']]],
+  ['borne',['borne',['../structborne.html',1,'']]]
 ];

@@ -1,51 +1,67 @@
-\contentsline {section}{\numberline {1}Navigation}{2}{section.1}
-\contentsline {section}{\numberline {2}Index des classes}{2}{section.2}
-\contentsline {subsection}{\numberline {2.1}Liste des classes}{2}{subsection.2.1}
-\contentsline {section}{\numberline {3}Index des fichiers}{2}{section.3}
-\contentsline {subsection}{\numberline {3.1}Liste des fichiers}{2}{subsection.3.1}
-\contentsline {section}{\numberline {4}Documentation des classes}{2}{section.4}
-\contentsline {subsection}{\numberline {4.1}R\IeC {\'e}f\IeC {\'e}rence de la structure buf}{2}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Description d\IeC {\'e}taill\IeC {\'e}e}{3}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Documentation des donn\IeC {\'e}es membres}{3}{subsubsection.4.1.2}
-\contentsline {paragraph}{\numberline {4.1.2.1}c}{3}{paragraph.4.1.2.1}
-\contentsline {paragraph}{\numberline {4.1.2.2}s}{3}{paragraph.4.1.2.2}
-\contentsline {paragraph}{\numberline {4.1.2.3}v}{4}{paragraph.4.1.2.3}
-\contentsline {section}{\numberline {5}Documentation des fichiers}{4}{section.5}
-\contentsline {subsection}{\numberline {5.1}R\IeC {\'e}f\IeC {\'e}rence du fichier src/bdd/bdd.c}{4}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}f\IeC {\'e}rence du fichier src/bdd/bdd.h}{4}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Documentation des fonctions}{5}{subsubsection.5.2.1}
-\contentsline {paragraph}{\numberline {5.2.1.1}buf\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}create()}{5}{paragraph.5.2.1.1}
-\contentsline {paragraph}{\numberline {5.2.1.2}buf\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}destroy()}{6}{paragraph.5.2.1.2}
-\contentsline {paragraph}{\numberline {5.2.1.3}buf\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}dump()}{6}{paragraph.5.2.1.3}
-\contentsline {paragraph}{\numberline {5.2.1.4}buf\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}put()}{6}{paragraph.5.2.1.4}
-\contentsline {paragraph}{\numberline {5.2.1.5}buf\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}quicksort()}{7}{paragraph.5.2.1.5}
-\contentsline {paragraph}{\numberline {5.2.1.6}merge\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}join()}{7}{paragraph.5.2.1.6}
-\contentsline {paragraph}{\numberline {5.2.1.7}natural\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}join()}{7}{paragraph.5.2.1.7}
-\contentsline {paragraph}{\numberline {5.2.1.8}store\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}File\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Buffer()}{8}{paragraph.5.2.1.8}
-\contentsline {paragraph}{\numberline {5.2.1.9}store\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}File\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Buffer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C()}{8}{paragraph.5.2.1.9}
-\contentsline {paragraph}{\numberline {5.2.1.10}write\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Buffer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}In\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}File()}{8}{paragraph.5.2.1.10}
-\contentsline {paragraph}{\numberline {5.2.1.11}write\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Buffer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}In\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}File\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C()}{9}{paragraph.5.2.1.11}
-\contentsline {subsection}{\numberline {5.3}R\IeC {\'e}f\IeC {\'e}rence du fichier src/bdd/hexdump.c}{9}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Documentation des fonctions}{9}{subsubsection.5.3.1}
-\contentsline {paragraph}{\numberline {5.3.1.1}hex\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dump()}{9}{paragraph.5.3.1.1}
-\contentsline {subsection}{\numberline {5.4}R\IeC {\'e}f\IeC {\'e}rence du fichier src/bdd/hexdump.h}{9}{subsection.5.4}
-\contentsline {subsubsection}{\numberline {5.4.1}Documentation des fonctions}{10}{subsubsection.5.4.1}
-\contentsline {paragraph}{\numberline {5.4.1.1}hex\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dump()}{10}{paragraph.5.4.1.1}
-\contentsline {subsection}{\numberline {5.5}R\IeC {\'e}f\IeC {\'e}rence du fichier src/bdd/quicksort.c}{10}{subsection.5.5}
-\contentsline {subsubsection}{\numberline {5.5.1}Documentation des fonctions}{10}{subsubsection.5.5.1}
-\contentsline {paragraph}{\numberline {5.5.1.1}choose\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}pivot()}{10}{paragraph.5.5.1.1}
-\contentsline {paragraph}{\numberline {5.5.1.2}quicksort()}{10}{paragraph.5.5.1.2}
-\contentsline {paragraph}{\numberline {5.5.1.3}swap()}{11}{paragraph.5.5.1.3}
-\contentsline {subsection}{\numberline {5.6}R\IeC {\'e}f\IeC {\'e}rence du fichier src/bdd/quicksort.h}{11}{subsection.5.6}
-\contentsline {subsubsection}{\numberline {5.6.1}Documentation des fonctions}{11}{subsubsection.5.6.1}
-\contentsline {paragraph}{\numberline {5.6.1.1}quicksort()}{11}{paragraph.5.6.1.1}
-\contentsline {subsection}{\numberline {5.7}R\IeC {\'e}f\IeC {\'e}rence du fichier src/demo/1-\/natural-\/join.c}{11}{subsection.5.7}
-\contentsline {subsubsection}{\numberline {5.7.1}Documentation des fonctions}{12}{subsubsection.5.7.1}
-\contentsline {paragraph}{\numberline {5.7.1.1}main()}{12}{paragraph.5.7.1.1}
-\contentsline {subsection}{\numberline {5.8}R\IeC {\'e}f\IeC {\'e}rence du fichier src/demo/2-\/merge-\/join.c}{12}{subsection.5.8}
-\contentsline {subsubsection}{\numberline {5.8.1}Documentation des fonctions}{12}{subsubsection.5.8.1}
-\contentsline {paragraph}{\numberline {5.8.1.1}main()}{12}{paragraph.5.8.1.1}
-\contentsline {subsection}{\numberline {5.9}R\IeC {\'e}f\IeC {\'e}rence du fichier src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}ME.md}{12}{subsection.5.9}
-\contentsline {subsection}{\numberline {5.10}R\IeC {\'e}f\IeC {\'e}rence du fichier src/test/store\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}File\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Buffer.c}{12}{subsection.5.10}
-\contentsline {subsubsection}{\numberline {5.10.1}Documentation des fonctions}{12}{subsubsection.5.10.1}
-\contentsline {paragraph}{\numberline {5.10.1.1}main()}{12}{paragraph.5.10.1.1}
+\contentsline {section}{\numberline {1}Commandes}{1}{section.1}
+\contentsline {section}{\numberline {2}Navigation}{2}{section.2}
+\contentsline {section}{\numberline {3}Index des classes}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}Liste des classes}{2}{subsection.3.1}
+\contentsline {section}{\numberline {4}Index des fichiers}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Liste des fichiers}{3}{subsection.4.1}
+\contentsline {section}{\numberline {5}Documentation des classes}{3}{section.5}
+\contentsline {subsection}{\numberline {5.1}R\IeC {\'e}f\IeC {\'e}rence de la structure borne}{3}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Description d\IeC {\'e}taill\IeC {\'e}e}{4}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Documentation des donn\IeC {\'e}es membres}{4}{subsubsection.5.1.2}
+\contentsline {paragraph}{\numberline {5.1.2.1}basse}{4}{paragraph.5.1.2.1}
+\contentsline {paragraph}{\numberline {5.1.2.2}droite}{4}{paragraph.5.1.2.2}
+\contentsline {paragraph}{\numberline {5.1.2.3}gauche}{4}{paragraph.5.1.2.3}
+\contentsline {paragraph}{\numberline {5.1.2.4}haute}{4}{paragraph.5.1.2.4}
+\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}f\IeC {\'e}rence de la structure curseur}{5}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Description d\IeC {\'e}taill\IeC {\'e}e}{5}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Documentation des donn\IeC {\'e}es membres}{5}{subsubsection.5.2.2}
+\contentsline {paragraph}{\numberline {5.2.2.1}col}{5}{paragraph.5.2.2.1}
+\contentsline {paragraph}{\numberline {5.2.2.2}ligne}{5}{paragraph.5.2.2.2}
+\contentsline {section}{\numberline {6}Documentation des fichiers}{5}{section.6}
+\contentsline {subsection}{\numberline {6.1}R\IeC {\'e}f\IeC {\'e}rence du fichier R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}md}{5}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}R\IeC {\'e}f\IeC {\'e}rence du fichier src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}ME.md}{5}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}R\IeC {\'e}f\IeC {\'e}rence du fichier src/colimacon/colimacon.c}{5}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}R\IeC {\'e}f\IeC {\'e}rence du fichier src/colimacon/colimacon.h}{6}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Documentation des fonctions}{6}{subsubsection.6.4.1}
+\contentsline {paragraph}{\numberline {6.4.1.1}colimacon()}{6}{paragraph.6.4.1.1}
+\contentsline {paragraph}{\numberline {6.4.1.2}delete\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}colimacon()}{6}{paragraph.6.4.1.2}
+\contentsline {paragraph}{\numberline {6.4.1.3}print\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}colimacon()}{7}{paragraph.6.4.1.3}
+\contentsline {subsection}{\numberline {6.5}R\IeC {\'e}f\IeC {\'e}rence du fichier src/demo/1-\/colimacon.c}{7}{subsection.6.5}
+\contentsline {subsubsection}{\numberline {6.5.1}Documentation des fonctions}{7}{subsubsection.6.5.1}
+\contentsline {paragraph}{\numberline {6.5.1.1}main()}{7}{paragraph.6.5.1.1}
+\contentsline {subsection}{\numberline {6.6}R\IeC {\'e}f\IeC {\'e}rence du fichier src/demo/2-\/horizontal.c}{7}{subsection.6.6}
+\contentsline {subsubsection}{\numberline {6.6.1}Documentation des fonctions}{8}{subsubsection.6.6.1}
+\contentsline {paragraph}{\numberline {6.6.1.1}main()}{8}{paragraph.6.6.1.1}
+\contentsline {subsection}{\numberline {6.7}R\IeC {\'e}f\IeC {\'e}rence du fichier src/demo/3-\/vertical.c}{8}{subsection.6.7}
+\contentsline {subsubsection}{\numberline {6.7.1}Documentation des fonctions}{8}{subsubsection.6.7.1}
+\contentsline {paragraph}{\numberline {6.7.1.1}main()}{8}{paragraph.6.7.1.1}
+\contentsline {subsection}{\numberline {6.8}R\IeC {\'e}f\IeC {\'e}rence du fichier src/demo/4-\/carre.c}{8}{subsection.6.8}
+\contentsline {subsubsection}{\numberline {6.8.1}Documentation des fonctions}{9}{subsubsection.6.8.1}
+\contentsline {paragraph}{\numberline {6.8.1.1}main()}{9}{paragraph.6.8.1.1}
+\contentsline {subsection}{\numberline {6.9}R\IeC {\'e}f\IeC {\'e}rence du fichier src/demo/5-\/colimacon-\/no-\/print.c}{9}{subsection.6.9}
+\contentsline {subsubsection}{\numberline {6.9.1}Documentation des fonctions}{9}{subsubsection.6.9.1}
+\contentsline {paragraph}{\numberline {6.9.1.1}main()}{9}{paragraph.6.9.1.1}
+\contentsline {subsection}{\numberline {6.10}R\IeC {\'e}f\IeC {\'e}rence du fichier src/demo/6-\/colimacon-\/time.c}{9}{subsection.6.10}
+\contentsline {subsubsection}{\numberline {6.10.1}Documentation des fonctions}{10}{subsubsection.6.10.1}
+\contentsline {paragraph}{\numberline {6.10.1.1}main()}{10}{paragraph.6.10.1.1}
+\contentsline {subsection}{\numberline {6.11}R\IeC {\'e}f\IeC {\'e}rence du fichier src/test/1-\/1x1.c}{10}{subsection.6.11}
+\contentsline {subsubsection}{\numberline {6.11.1}Documentation des fonctions}{10}{subsubsection.6.11.1}
+\contentsline {paragraph}{\numberline {6.11.1.1}main()}{10}{paragraph.6.11.1.1}
+\contentsline {subsection}{\numberline {6.12}R\IeC {\'e}f\IeC {\'e}rence du fichier src/test/2-\/1x10.c}{10}{subsection.6.12}
+\contentsline {subsubsection}{\numberline {6.12.1}Documentation des fonctions}{11}{subsubsection.6.12.1}
+\contentsline {paragraph}{\numberline {6.12.1.1}main()}{11}{paragraph.6.12.1.1}
+\contentsline {subsection}{\numberline {6.13}R\IeC {\'e}f\IeC {\'e}rence du fichier src/test/3-\/10x1.c}{11}{subsection.6.13}
+\contentsline {subsubsection}{\numberline {6.13.1}Documentation des fonctions}{11}{subsubsection.6.13.1}
+\contentsline {paragraph}{\numberline {6.13.1.1}main()}{11}{paragraph.6.13.1.1}
+\contentsline {subsection}{\numberline {6.14}R\IeC {\'e}f\IeC {\'e}rence du fichier src/test/4-\/10x2.c}{11}{subsection.6.14}
+\contentsline {subsubsection}{\numberline {6.14.1}Documentation des fonctions}{12}{subsubsection.6.14.1}
+\contentsline {paragraph}{\numberline {6.14.1.1}main()}{12}{paragraph.6.14.1.1}
+\contentsline {subsection}{\numberline {6.15}R\IeC {\'e}f\IeC {\'e}rence du fichier src/test/5-\/2x10.c}{12}{subsection.6.15}
+\contentsline {subsubsection}{\numberline {6.15.1}Documentation des fonctions}{12}{subsubsection.6.15.1}
+\contentsline {paragraph}{\numberline {6.15.1.1}main()}{12}{paragraph.6.15.1.1}
+\contentsline {subsection}{\numberline {6.16}R\IeC {\'e}f\IeC {\'e}rence du fichier src/test/6-\/10x10.c}{12}{subsection.6.16}
+\contentsline {subsubsection}{\numberline {6.16.1}Documentation des fonctions}{13}{subsubsection.6.16.1}
+\contentsline {paragraph}{\numberline {6.16.1.1}main()}{13}{paragraph.6.16.1.1}
+\contentsline {subsection}{\numberline {6.17}R\IeC {\'e}f\IeC {\'e}rence du fichier src/test/7-\/1000x1000.c}{13}{subsection.6.17}
+\contentsline {subsubsection}{\numberline {6.17.1}Documentation des fonctions}{13}{subsubsection.6.17.1}
+\contentsline {paragraph}{\numberline {6.17.1.1}main()}{13}{paragraph.6.17.1.1}
