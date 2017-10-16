@@ -1,12 +1,17 @@
-.PHONY: clean doc rapport
+.PHONY: clean doc rapport lib obj bin demo-1 demo-2 demo-3 demo-4 demo-5 test
 
 CC=gcc
-CFLAGS= -Wall
+CFLAGS= -Wall -Werror
 
 # Repertoire global
 SRCDIR     := src
 OBJDIR     := obj
 BINDIR     := bin
+LIBDIR     := lib
+
+#Lib
+COLIMACON_STATIC   := $(LIBDIR)/colimacon.a
+COLIMACON_DYNMIC   := $(LIBDIR)/colimacon.so
 
 # Zone source de COLIMACON
 COLIMACON_DIR      := colimacon
@@ -41,37 +46,43 @@ BINDIR_TEST   := $(BINDIR)/$(TEST_DIR)
 BIN_TEST      := $(patsubst $(SRCDIR_TEST)/%.c,$(BINDIR_TEST)/%,$(SOURCES_TEST))
 
 # Recette pour une compilation complete
-all:  $(OBJECTS_COLIMACON) $(OBJECTS_DEMO) $(OBJECTS_TEST) $(BIN_DEMO) $(BIN_TEST)
+all: lib obj bin
+
+lib: $(COLIMACON_STATIC) $(COLIMACON_DYNMIC)
+
+obj: $(OBJECTS_COLIMACON) $(OBJECTS_DEMO) $(OBJECTS_TEST)
+
+bin: $(BIN_TEST) $(BIN_DEMO)
 
 # Recette de compilatation de objets de démo
 $(OBJDIR_DEMO)/%.o : $(SRCDIR_DEMO)/%.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c -o $@ $<
-	@echo "Compilation "$<" reussite!"
+	@echo "Compilation "$@" reussite!"
 
 # Recette de compilatation de objets de test
 $(OBJDIR_TEST)/%.o : $(SRCDIR_TEST)/%.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c -o $@ $<
-	@echo "Compilation "$<" reussite!"
+	@echo "Compilation "$@" reussite!"
 
 # Recette de compilatation de objets de la bibliotheque COLIMACON
 $(OBJDIR_COLIMACON)/%.o : $(SRCDIR_COLIMACON)/%.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c -o $@ $<
-	@echo "Compilation "$<" reussite!"
+	@echo "Compilation "$@" reussite!"
 
 # Recette de compilatation des exécutable de test
 $(BINDIR_TEST)/%: $(OBJDIR_TEST)/%.o $(OBJECTS_COLIMACON)
 	@mkdir -p $(dir $@)
 	@$(CC) $(OBJECTS_COLIMACON) $(subst $(BINDIR_TEST)/,$(OBJDIR_TEST)/,$@).o -o $@
-	@echo "Compilation "$<" reussite!"
+	@echo "Compilation "$@" reussite!"
 
 # Recette de compilatation des exécutable de demo
 $(BINDIR_DEMO)/%: $(OBJDIR_DEMO)/%.o $(OBJECTS_COLIMACON)
 	@mkdir -p $(dir $@)
 	@$(CC) $(OBJECTS_COLIMACON) $(subst $(BINDIR_DEMO)/,$(OBJDIR_DEMO)/,$@).o -o $@
-	@echo "Compilation "$<" reussite!"
+	@echo "Compilation "$@" reussite!"
 
 # Netoyage du projet
 clean:
@@ -79,9 +90,11 @@ clean:
 	@echo "Répertoire "$(OBJDIR)" supprimé"
 	@rm -rf $(BINDIR)
 	@echo "Répertoire "$(BINDIR)" supprimé"
+	@rm -rf $(LIBDIR)
+	@echo "Répertoire "$(LIBDIR)" supprimé"
 
 # Lancement de script de test
-test: all
+test: $(BIN_TEST)
 	@chmod +x script/test.sh
 	@./script/test.sh
 	@echo "\n\nScript de test terminé"
@@ -133,3 +146,15 @@ else
 		@echo "\n\nDémo terminé"
 endif
 endif
+
+#lib
+$(COLIMACON_STATIC): $(OBJECTS_COLIMACON)
+	@mkdir -p $(dir $@)
+	@ar -q $@ $(OBJECTS_COLIMACON)
+	@echo "Compilation "$@" reussite!"
+
+
+$(COLIMACON_DYNMIC): $(SOURCES_COLIMACON)
+	@mkdir -p $(dir $@)
+	@$(CC) -c -fpic -o $@ $(SOURCES_COLIMACON)
+	@echo "Compilation "$@" reussite!"

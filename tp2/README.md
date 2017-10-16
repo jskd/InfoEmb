@@ -2,19 +2,22 @@
 
 * __make all__  : Compile tout les fichiers
 * __make test__ : Lancement de la série de tests automatiques
+* __make lib__ : Génération de la bibliothéque static et dynamique
 * __make doc__  : Génération de la documentation (doxygen)
 * __make rapport__ : Génération du rapport (latex)
 * __make clean__ : Nettoyage du projet (supression des objets et binaires)
-* __make demo-1 [line] [col]__ : Lancer la démo colimacon
+* __make demo-1 ligne=X col=X__ : Lancer la démo colimacon
 * __make demo-2__: Lancer la démo horizontal
 * __make demo-3__: Lancer la démo vertical
-* __make demo-4__: Lancer la démo carre
+* __make demo-4__: Lancer la démo carr
+* __make demo-1 ligne=X col=X__ : Lancer la démo colimacon sans print (utile pour le bench)
 
 # Arborescence
 
 * __bin__ : Binaire exécutable
   * __demo__ : Exécutable de démonstration
   * __test__ : Exécutable de test
+* __lib__ : Bibliothéque
 * __doc__ : Documentation doxygen sous differents formats
 * __rapport__ : Source du rapport
 * __res__ : Ressources necessaire au projet (fichier de bdd)
@@ -37,7 +40,3 @@
 * colimacon 2x10
 * colimacon 10x10
 * colimacon 1000x1000 (sans print)
-
-
-
-
