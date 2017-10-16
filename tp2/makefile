@@ -1,4 +1,4 @@
-.PHONY: clean doc rapport lib obj bin demo-1 demo-2 demo-3 demo-4 demo-5 test
+.PHONY: clean doc rapport lib obj bin demo-1 demo-2 demo-3 demo-4 demo-5 demo-6 test
 
 CC=gcc
 CFLAGS= -Wall -Werror
@@ -97,18 +97,18 @@ clean:
 test: $(BIN_TEST)
 	@chmod +x script/test.sh
 	@./script/test.sh
-	@echo "\n\nScript de test terminé"
+	@echo "Script de test terminé"
 
 # Lancement du générateur de document
 doc:
 	@doxygen doc/doxyfile
-	@echo "\n\nGénération de la doc terminé"
+	@echo "Génération de la doc terminé"
 
 # Lancement du générateur de rapport
 rapport:
 	@cd rapport && $(MAKE)
 	@cp rapport/rapport.pdf rapport.pdf
-	@echo "\n\nGénération du rapport terminé"
+	@echo "Génération du rapport terminé"
 
 # Lancement des démos
 demo-1: $(BIN_DEMO)
@@ -119,21 +119,21 @@ ifndef col
 	@echo "Utilisation: make demo-1 ligne=X col=X"
 else
 		@./bin/demo/1-colimacon $(ligne) $(col)
-		@echo "\n\nDémo terminé"
+		@echo "Démo terminé"
 endif
 endif
 
 demo-2: $(BIN_DEMO)
 	@./bin/demo/2-horizontal
-	@echo "\n\nDémo terminé"
+	@echo "Démo terminé"
 
 demo-3: $(BIN_DEMO)
 	@./bin/demo/3-vertical
-	@echo "\n\nDémo terminé"
+	@echo "Démo terminé"
 
 demo-4: $(BIN_DEMO)
 	@./bin/demo/4-carre
-	@echo "\n\nDémo terminé"
+	@echo "Démo terminé"
 
 demo-5: $(BIN_DEMO)
 ifndef ligne
@@ -143,7 +143,19 @@ ifndef col
 	@echo "Utilisation: make demo-5 ligne=X col=X"
 else
 		@./bin/demo/5-colimacon-no-print $(ligne) $(col)
-		@echo "\n\nDémo terminé"
+		@echo "Démo terminé"
+endif
+endif
+
+demo-6: $(BIN_DEMO)
+ifndef ligne
+	@echo "Utilisation: make demo-6 ligne=X col=X"
+else
+ifndef col
+	@echo "Utilisation: make demo-6 ligne=X col=X"
+else
+		@./bin/demo/6-colimacon-time $(ligne) $(col)
+		@echo "Démo terminé"
 endif
 endif
 

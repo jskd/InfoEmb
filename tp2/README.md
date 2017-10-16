@@ -10,7 +10,8 @@
 * __make demo-2__: Lancer la démo horizontal
 * __make demo-3__: Lancer la démo vertical
 * __make demo-4__: Lancer la démo carr
-* __make demo-1 ligne=X col=X__ : Lancer la démo colimacon sans print (utile pour le bench)
+* __make demo-5 ligne=X col=X__ : Lancer la démo colimacon sans print (utile pour le bench)
+* __make demo-6 ligne=X col=X__ : Lancer la démo colimacon avec sortie temps (utile pour le bench)
 
 # Arborescence
 
