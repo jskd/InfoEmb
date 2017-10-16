@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @brief Programme de démonstration
+ *        Affichage en fonction des parammetres
+ *        Utilisation: colimacon [ligne] [col]
+ */
 int main(int argc, char** argv)
 {
   if(argc < 3)

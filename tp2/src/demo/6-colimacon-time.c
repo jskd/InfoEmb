@@ -4,8 +4,10 @@
 #include <time.h>
 
     
-
-
+/**
+ * @brief Programme de démonstration affichant le temps de génération
+ *        Utilisation: colimacon [ligne] [col]  
+ */
 int main(int argc, char** argv)
 {
   clock_t start_t, end_t;

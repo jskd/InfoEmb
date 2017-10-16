@@ -4,7 +4,10 @@
 
 static const int _line= 2;
 static const int _col= 10;
-
+/**
+ * @brief Programme de test
+ *        Taille 2x10
+ */
 int main(int argc, char** argv)
 {
 
