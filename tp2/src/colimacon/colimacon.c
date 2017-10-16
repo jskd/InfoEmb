@@ -25,7 +25,7 @@ typedef enum {
 /**
  *  Print tableÒ
  */
-void print_table(int** table, int line, int col)
+void print_colimacon(int** table, int line, int col)
 {
   for(int i_line=0; i_line < line; i_line++) {
       for(int i_col=0; i_col < col; i_col++) {
@@ -33,6 +33,13 @@ void print_table(int** table, int line, int col)
       }
       printf("\n");
   }
+}
+
+void delete_colimacon(int** table, int line, int col)
+{
+  for(int i_line; i_line<line; i_line++)
+    free(table[i_line]);
+  free(table);
 }
 
 static int** _malloc_colimacon(int line, int col) {

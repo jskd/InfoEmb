@@ -1,5 +1,5 @@
 # Navigation
 
-* __bdd__  : Source de la BDD
+* __colimacon__  : Source de colimacon
 * __demo__ : Exemple d'utilisation de la BDD
 * __test__ : Test unitaire de la BDD
