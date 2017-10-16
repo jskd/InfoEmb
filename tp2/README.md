@@ -1,13 +1,3 @@
-# Attention
-
-Ce projet a été conçu pour fonctionner avec make
-
-Il est recommandé pour les utilisateurs n'aimant pas le terminal 
-de manipuler le projet uniquement avec **eclipse** 
-
-Des *builds targets* sont configurés, il suffit de double cliquer dessus
-pour lancer la commande make correspondante
-
 # Commandes
 
 * __make all__  : Compile tout les fichiers
@@ -15,9 +5,10 @@ pour lancer la commande make correspondante
 * __make doc__  : Génération de la documentation (doxygen)
 * __make rapport__ : Génération du rapport (latex)
 * __make clean__ : Nettoyage du projet (supression des objets et binaires)
-* __make demo-tp1__: Lancer la démo tp1
-* __make demo-tp2__: Lancer la démo tp2
-* __make rm-rs__: Supprime le fichier res/RS.txt
+* __make demo-1 [line] [col]__ : Lancer la démo colimacon
+* __make demo-2__: Lancer la démo horizontal
+* __make demo-3__: Lancer la démo vertical
+* __make demo-4__: Lancer la démo carre
 
 # Arborescence
 
@@ -39,13 +30,13 @@ pour lancer la commande make correspondante
 
 # Tests disponibles
 
-*
-*
-*
-*
-*
-*
-
+* colimacon 1x1
+* colimacon 1x10
+* colimacon 10x1
+* colimacon 10x2
+* colimacon 2x10
+* colimacon 10x10
+* colimacon 1000x1000 (sans print)
 
 
 

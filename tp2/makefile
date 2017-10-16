@@ -93,6 +93,31 @@ doc:
 
 # Lancement du générateur de rapport
 rapport:
-	@cd rapport && $(MAKE) 
-	@cp rapport/rapport.pdf rapport.pdf 
+	@cd rapport && $(MAKE)
+	@cp rapport/rapport.pdf rapport.pdf
 	@echo "\n\nGénération du rapport terminé"
+
+# Lancement des démos
+demo-1: $(BIN_DEMO)
+	ifeq ("$(ligne)","")
+		@echo "Utilisation make demo-1 ligne=X col=X"
+	else
+		ifeq ("$(col)","")
+			@echo "Utilisation make demo-1 ligne=X col=X"
+		else
+			@./bin/demo/1-colimacon $(ligne) $(col)
+		endif
+	endif
+	@echo "\n\nDémo terminé"
+
+demo-2: $(BIN_DEMO)
+	@./bin/demo/2-horizontal
+	@echo "\n\nDémo terminé"
+
+demo-3: $(BIN_DEMO)
+	@./bin/demo/3-vertical
+	@echo "\n\nDémo terminé"
+
+demo-4: $(BIN_DEMO)
+	@./bin/demo/4-carre
+	@echo "\n\nDémo terminé"
