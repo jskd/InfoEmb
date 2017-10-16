@@ -129,9 +129,7 @@ else
 ifndef col
 	@echo "Utilisation: make demo-5 ligne=X col=X"
 else
-		@./bin/demo/1-colimacon $(ligne) $(col)
+		@./bin/demo/5-colimacon-no-print $(ligne) $(col)
 		@echo "\n\nDémo terminé"
 endif
 endif
-
-
