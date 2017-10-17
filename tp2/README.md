@@ -24,7 +24,7 @@
 * __res__ : Ressources necessaire au projet (fichier de bdd)
 * __script__  : Script utilisé pour les test
 * __src__ : Source du projet
-  * __bdd__   : Source de la bibliothéque
+  * __colimacon__   : Source de colimacon
   * __demo__  : Sources des differentes démonstrations d'utilisation
   * __test__  : Sources des dufferents tests
 

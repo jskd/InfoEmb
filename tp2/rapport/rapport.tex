@@ -17,39 +17,28 @@
 \maketitle
 
 \begin{abstract}
-Comment avons nous pu écrire autant de chose sur seulement deux boucles imbriqués et une fonction de merge de moins de 20 lignes?
+ Colimaçon: \newline
+ 001  002  003  004  005  006  007  008  009  010 \newline
+ 022  023  024  025  026  027  028  029  030  011 \newline
+ 021  020  019  018  017  016  015  014  013  012 \newline
 \end{abstract}
 
 \section{Comment compiler le projet}
 
-\subsection{Avec le terminal}
-
 \begin{itemize}
-	\item make all : Compile tout les fichiers
-	\item make test : Lancement de la série de tests automatiques
-	\item make doc  : Génération de la documentation (doxygen)
-	\item make rapport : Génération du rapport (latex)
-	\item make clean : Nettoyage du projet (supression des objets et binaires)
-	\item make demo-tp1 : Lancer la démo tp1
-	\item make demo-tp2 : Lancer la démo tp2
-	\item make rm-rs : Supprime le fichier res/RS.txt
+\item make all: Compile tout les fichiers
+\item make test: Lancement de la série de tests automatiques
+\item make lib: Génération de la bibliothéque static et dynamique
+\item make doc: Génération de la documentation (doxygen)
+\item make rapport: Génération du rapport (latex)
+\item make clean: Nettoyage du projet (supression des objets et binaires)
+\item make demo-1 ligne=X col=X: Lancer la démo colimacon
+\item make demo-2: Lancer la démo horizontal
+\item make demo-3: Lancer la démo vertical
+\item make demo-4: Lancer la démo carré
+\item make demo-5 ligne=X col=X: Lancer la démo colimacon sans print (utile pour le bench)
+\item make demo-6 ligne=X col=X: Lancer la démo colimacon avec sortie temps (utile pour le bench)
 \end{itemize}
-
-\subsection{Avec ECLIPSE}
-
-Pour lancer une commande utiliser les boutons magique build targets.
-
-\begin{figure}[h!] 
-\centering
-\includegraphics[width=0.5\textwidth]{bouton-magique.png}
-\caption{Double clique ici!}
-\end{figure}
-
-
-\subsection{Avec code:block}
-
-Aucun portage sur code:block de prévu. 
-Nous avons passé une longue heure à configurer eclipse et nous en avons assez!
 
 \section{Arborescence}
 
@@ -59,13 +48,14 @@ Nous avons passé une longue heure à configurer eclipse et nous en avons assez!
   \item demo : Exécutable de démonstration
   \item test : Exécutable de test
 \end{itemize}
+\item lib : Bibliothéque
 \item doc : Documentation doxygen sous differents formats
 \item rapport : Source du rapport
 \item res : Ressources necessaire au projet (fichier de bdd)
 \item script  : Script utilisé pour les test
 \item src : Source du projet
 \begin{itemize}
-  \item bdd   : Source de la bibliothéque
+  \item colimacon : Source de colimacon
   \item demo  : Sources des differentes démonstrations d'utilisation
   \item test  : Sources des dufferents tests
 \end{itemize}
@@ -75,24 +65,27 @@ Nous avons passé une longue heure à configurer eclipse et nous en avons assez!
 \item rappot.pdf : C'est moi
 \end{itemize}
 
-\section{Caracteristiques}
+\section{Test disponible}
+Les test fonctione de la manière suivante: un script bash exécute chacun de binaire de 
+test un par un en enregistrant le sortie standard dans un fichier .out 
+Ensuite il compare avec la commande diff chacun des fichier .out avec la 
+valeur attendu dont la valeur est stoqué dans un fichier .expected
 
+Les fichier .out et .expected sont dans le répertoire src/test/ 
+Le script se situe dans le repertoire script
+
+Les test disponible sont:
 \begin{itemize}
-	\item Le code est organisé
-	\item Il y a des code des tests
-	\item Il y a la doc
-	\item Il y a un rapport
-	\item Et il y a pleins d'autre chose
+  \item  colimacon 1x1
+  \item  colimacon 1x10
+  \item  colimacon 10x1
+  \item  colimacon 10x2
+  \item  colimacon 2x10
+  \item  colimacon 10x10
+  \item  colimacon 1000x1000 (sans print)
 \end{itemize}
 
-\section{Test unitaire}
-
-
-\includegraphics[width=0.8\textwidth]{test.png}
-
-
-
-\includepdf[pages=3-12]{refman.pdf}
+\includepdf[pages=1-15]{refman.pdf}
 
 \end{document}
               
