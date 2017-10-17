@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.10.14)  17 OCT 2017 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.10.14)  17 OCT 2017 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,34 +786,59 @@ File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 \AM@toc@title=\toks37
 \c@AM@survey=\count125
 \AM@templatesizebox=\box40
-) (./rapport.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count126
+\lst@gtempboxa=\box41
+\lst@token=\toks38
+\lst@length=\count127
+\lst@currlwidth=\dimen165
+\lst@column=\count128
+\lst@pos=\count129
+\lst@lostspace=\dimen166
+\lst@width=\dimen167
+\lst@newlines=\count130
+\lst@lineno=\count131
+\lst@maxwidth=\dimen168
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count132
+\lst@skipnumbers=\count133
+\lst@framebox=\box42
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (./rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count126
-\scratchdimen=\dimen165
-\scratchbox=\box41
-\nofMPsegments=\count127
-\nofMParguments=\count128
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count129
-\MPscratchDim=\dimen166
-\MPnumerator=\count130
-\makeMPintoPDFobject=\count131
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count134
+\scratchdimen=\dimen169
+\scratchbox=\box43
+\nofMPsegments=\count135
+\nofMParguments=\count136
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count137
+\MPscratchDim=\dimen170
+\MPnumerator=\count138
+\makeMPintoPDFobject=\count139
+\everyMPtoPDFconversion=\toks40
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -861,7 +886,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box42
+\AtBeginShipoutBox=\box44
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -874,273 +899,298 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
+\c@lstlisting=\count140
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<refman.pdf, id=20, 597.50829pt x 845.0471pt>
+<exemple.png, id=20, 990.70125pt x 462.72874pt>
+File: exemple.png Graphic file (type png)
+ <use exemple.png>
+Package pdftex.def Info: exemple.png used on input line 103.
+(pdftex.def)             Requested size: 276.00105pt x 128.91357pt.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 126.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 126.
+ [3 <./exemple.png>]
+Overfull \hbox (75.00427pt too wide) in paragraph at lines 164--165
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.00415pt too wide) in paragraph at lines 169--170
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[4] <refman.pdf, id=30, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf>
-Package pdftex.def Info: refman.pdf used on input line 109.
+Package pdftex.def Info: refman.pdf used on input line 218.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf>
-Package pdftex.def Info: refman.pdf used on input line 109.
+Package pdftex.def Info: refman.pdf used on input line 218.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <refman.pdf, id=23, page=1, 597.50829pt x 845.0471pt>
+ <refman.pdf, id=33, page=1, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 1>
-Package pdftex.def Info: refman.pdf, page1 used on input line 109.
+Package pdftex.def Info: refman.pdf, page1 used on input line 218.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 1>
-Package pdftex.def Info: refman.pdf, page1 used on input line 109.
+Package pdftex.def Info: refman.pdf, page1 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [3]
+ [5]
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 1>
-Package pdftex.def Info: refman.pdf, page1 used on input line 109.
+Package pdftex.def Info: refman.pdf, page1 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 1>
-Package pdftex.def Info: refman.pdf, page1 used on input line 109.
+Package pdftex.def Info: refman.pdf, page1 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 1>
-Package pdftex.def Info: refman.pdf, page1 used on input line 109.
+Package pdftex.def Info: refman.pdf, page1 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [4 <./refman.pdf>]
-<refman.pdf, id=36, page=2, 597.50829pt x 845.0471pt>
+ [6 <./refman.pdf>]
+<refman.pdf, id=46, page=2, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 2>
-Package pdftex.def Info: refman.pdf, page2 used on input line 109.
+Package pdftex.def Info: refman.pdf, page2 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 2>
-Package pdftex.def Info: refman.pdf, page2 used on input line 109.
+Package pdftex.def Info: refman.pdf, page2 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 2>
-Package pdftex.def Info: refman.pdf, page2 used on input line 109.
+Package pdftex.def Info: refman.pdf, page2 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [5 <./refman.pdf>]
-<refman.pdf, id=50, page=3, 597.50829pt x 845.0471pt>
+ [7 <./refman.pdf>]
+<refman.pdf, id=61, page=3, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 3>
-Package pdftex.def Info: refman.pdf, page3 used on input line 109.
+Package pdftex.def Info: refman.pdf, page3 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 3>
-Package pdftex.def Info: refman.pdf, page3 used on input line 109.
+Package pdftex.def Info: refman.pdf, page3 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 3>
-Package pdftex.def Info: refman.pdf, page3 used on input line 109.
+Package pdftex.def Info: refman.pdf, page3 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [6 <./refman.pdf>]
-<refman.pdf, id=54, page=4, 597.50829pt x 845.0471pt>
+ [8 <./refman.pdf>]
+<refman.pdf, id=65, page=4, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 4>
-Package pdftex.def Info: refman.pdf, page4 used on input line 109.
+Package pdftex.def Info: refman.pdf, page4 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 4>
-Package pdftex.def Info: refman.pdf, page4 used on input line 109.
+Package pdftex.def Info: refman.pdf, page4 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 4>
-Package pdftex.def Info: refman.pdf, page4 used on input line 109.
+Package pdftex.def Info: refman.pdf, page4 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [7 <./refman.pdf>]
-<refman.pdf, id=64, page=5, 597.50829pt x 845.0471pt>
+ [9 <./refman.pdf>]
+<refman.pdf, id=74, page=5, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 5>
-Package pdftex.def Info: refman.pdf, page5 used on input line 109.
+Package pdftex.def Info: refman.pdf, page5 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 5>
-Package pdftex.def Info: refman.pdf, page5 used on input line 109.
+Package pdftex.def Info: refman.pdf, page5 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 5>
-Package pdftex.def Info: refman.pdf, page5 used on input line 109.
+Package pdftex.def Info: refman.pdf, page5 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [8 <./refman.pdf>]
-<refman.pdf, id=68, page=6, 597.50829pt x 845.0471pt>
+ [10 <./refman.pdf>]
+<refman.pdf, id=78, page=6, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 6>
-Package pdftex.def Info: refman.pdf, page6 used on input line 109.
+Package pdftex.def Info: refman.pdf, page6 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 6>
-Package pdftex.def Info: refman.pdf, page6 used on input line 109.
+Package pdftex.def Info: refman.pdf, page6 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 6>
-Package pdftex.def Info: refman.pdf, page6 used on input line 109.
+Package pdftex.def Info: refman.pdf, page6 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [9 <./refman.pdf>]
-<refman.pdf, id=77, page=7, 597.50829pt x 845.0471pt>
+ [11 <./refman.pdf>]
+<refman.pdf, id=87, page=7, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 7>
-Package pdftex.def Info: refman.pdf, page7 used on input line 109.
+Package pdftex.def Info: refman.pdf, page7 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 7>
-Package pdftex.def Info: refman.pdf, page7 used on input line 109.
+Package pdftex.def Info: refman.pdf, page7 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 7>
-Package pdftex.def Info: refman.pdf, page7 used on input line 109.
+Package pdftex.def Info: refman.pdf, page7 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [10 <./refman.pdf>]
-<refman.pdf, id=86, page=8, 597.50829pt x 845.0471pt>
+ [12 <./refman.pdf>]
+<refman.pdf, id=96, page=8, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 8>
-Package pdftex.def Info: refman.pdf, page8 used on input line 109.
+Package pdftex.def Info: refman.pdf, page8 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 8>
-Package pdftex.def Info: refman.pdf, page8 used on input line 109.
+Package pdftex.def Info: refman.pdf, page8 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 8>
-Package pdftex.def Info: refman.pdf, page8 used on input line 109.
+Package pdftex.def Info: refman.pdf, page8 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [11 <./refman.pdf>]
-<refman.pdf, id=105, page=9, 597.50829pt x 845.0471pt>
+ [13 <./refman.pdf>]
+<refman.pdf, id=116, page=9, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 9>
-Package pdftex.def Info: refman.pdf, page9 used on input line 109.
+Package pdftex.def Info: refman.pdf, page9 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 9>
-Package pdftex.def Info: refman.pdf, page9 used on input line 109.
+Package pdftex.def Info: refman.pdf, page9 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 9>
-Package pdftex.def Info: refman.pdf, page9 used on input line 109.
+Package pdftex.def Info: refman.pdf, page9 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[12 <./refman.pdf>] <refman.pdf, id=109, page=10, 597.50829pt x 845.0471pt>
+[14 <./refman.pdf>] <refman.pdf, id=120, page=10, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 10>
-Package pdftex.def Info: refman.pdf, page10 used on input line 109.
+Package pdftex.def Info: refman.pdf, page10 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 10>
-Package pdftex.def Info: refman.pdf, page10 used on input line 109.
+Package pdftex.def Info: refman.pdf, page10 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 10>
-Package pdftex.def Info: refman.pdf, page10 used on input line 109.
+Package pdftex.def Info: refman.pdf, page10 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[13 <./refman.pdf>] <refman.pdf, id=114, page=11, 597.50829pt x 845.0471pt>
+[15 <./refman.pdf>] <refman.pdf, id=124, page=11, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 11>
-Package pdftex.def Info: refman.pdf, page11 used on input line 109.
+Package pdftex.def Info: refman.pdf, page11 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 11>
-Package pdftex.def Info: refman.pdf, page11 used on input line 109.
+Package pdftex.def Info: refman.pdf, page11 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 11>
-Package pdftex.def Info: refman.pdf, page11 used on input line 109.
+Package pdftex.def Info: refman.pdf, page11 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[14 <./refman.pdf>] <refman.pdf, id=118, page=12, 597.50829pt x 845.0471pt>
+[16 <./refman.pdf>] <refman.pdf, id=128, page=12, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 12>
-Package pdftex.def Info: refman.pdf, page12 used on input line 109.
+Package pdftex.def Info: refman.pdf, page12 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 12>
-Package pdftex.def Info: refman.pdf, page12 used on input line 109.
+Package pdftex.def Info: refman.pdf, page12 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 12>
-Package pdftex.def Info: refman.pdf, page12 used on input line 109.
+Package pdftex.def Info: refman.pdf, page12 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[15 <./refman.pdf>] <refman.pdf, id=122, page=13, 597.50829pt x 845.0471pt>
+[17 <./refman.pdf>] <refman.pdf, id=132, page=13, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 13>
-Package pdftex.def Info: refman.pdf, page13 used on input line 109.
+Package pdftex.def Info: refman.pdf, page13 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 13>
-Package pdftex.def Info: refman.pdf, page13 used on input line 109.
+Package pdftex.def Info: refman.pdf, page13 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 13>
-Package pdftex.def Info: refman.pdf, page13 used on input line 109.
+Package pdftex.def Info: refman.pdf, page13 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[16 <./refman.pdf>] <refman.pdf, id=126, page=14, 597.50829pt x 845.0471pt>
+[18 <./refman.pdf>] <refman.pdf, id=136, page=14, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 14>
-Package pdftex.def Info: refman.pdf, page14 used on input line 109.
+Package pdftex.def Info: refman.pdf, page14 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 14>
-Package pdftex.def Info: refman.pdf, page14 used on input line 109.
+Package pdftex.def Info: refman.pdf, page14 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 14>
-Package pdftex.def Info: refman.pdf, page14 used on input line 109.
+Package pdftex.def Info: refman.pdf, page14 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[17 <./refman.pdf>] <refman.pdf, id=130, page=15, 597.50829pt x 845.0471pt>
+[19 <./refman.pdf>] <refman.pdf, id=141, page=15, 597.50829pt x 845.0471pt>
 File: refman.pdf Graphic file (type pdf)
 
 <use refman.pdf, page 15>
-Package pdftex.def Info: refman.pdf, page15 used on input line 109.
+Package pdftex.def Info: refman.pdf, page15 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 15>
-Package pdftex.def Info: refman.pdf, page15 used on input line 109.
+Package pdftex.def Info: refman.pdf, page15 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: refman.pdf Graphic file (type pdf)
  <use refman.pdf, page 15>
-Package pdftex.def Info: refman.pdf, page15 used on input line 109.
+Package pdftex.def Info: refman.pdf, page15 used on input line 218.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[18 <./refman.pdf>] (./rapport.aux) ) 
+[20 <./refman.pdf>] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 14010 strings out of 494945
- 270136 string characters out of 6181031
- 315324 words of memory out of 5000000
- 17005 multiletter control sequences out of 15000+600000
+ 15630 strings out of 494945
+ 291431 string characters out of 6181031
+ 352285 words of memory out of 5000000
+ 18608 multiletter control sequences out of 15000+600000
  8869 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 62i,18n,56p,438b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,56p,438b,1602s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
@@ -1156,10 +1206,10 @@ urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on rapport.pdf (18 pages, 186319 bytes).
+Output written on rapport.pdf (20 pages, 258984 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 181 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

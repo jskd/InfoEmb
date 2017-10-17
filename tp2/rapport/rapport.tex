@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{pdfpages}
+\usepackage{listings}
 
 \title{InfoEmb TP2}
 
@@ -61,17 +62,17 @@
 \end{itemize}
 
 \item sujet.pdf  : Sujet du projet
-\item README.md  : Le readme du projet 
+\item README.md  : Le readme du projet
 \item rappot.pdf : C'est moi
 \end{itemize}
 
 \section{Test disponible}
-Les test fonctione de la manière suivante: un script bash exécute chacun de binaire de 
-test un par un en enregistrant le sortie standard dans un fichier .out 
-Ensuite il compare avec la commande diff chacun des fichier .out avec la 
+Les test fonctione de la manière suivante: un script bash exécute chacun de binaire de
+test un par un en enregistrant le sortie standard dans un fichier .out
+Ensuite il compare avec la commande diff chacun des fichier .out avec la
 valeur attendu dont la valeur est stoqué dans un fichier .expected
 
-Les fichier .out et .expected sont dans le répertoire src/test/ 
+Les fichier .out et .expected sont dans le répertoire src/test/
 Le script se situe dans le repertoire script
 
 Les test disponible sont:
@@ -89,18 +90,132 @@ Les test disponible sont:
 \section{Fonctionnement}
 
 Le remplissage s'effectue avec un systeme de borne (voir struct borne) et de séquence de direction (voir direction\_t).
-
 Chacune des écriture sont faite dans un ordre de direction: DROITE puis BAS puis GAUCHE puis HAUT jusqu'à que le tableau soit remplis.
-
 L'écriture dans une direction fonctionne de cette manière suivante:
 \begin{itemize}
   \item On calcule la position inital du curseur en fonction des borne et de la direction. (\_get\_position\_initiale)
   \item On regarde si l'on peux ecrire dans la case calculé (\_canWrite)
-  \item S'il est possible d'écrire, on le fait puis on réitére l'operation en avançant le curseur d'une case à chaque fois (\_iter\_curseur) 
+  \item S'il est possible d'écrire, on le fait puis on réitére l'operation en avançant le curseur d'une case à chaque fois (\_iter\_curseur)
   \item Enfin quand l'écriture n'est plus possible, on avance la borne en fonction de la direction d'écriture (\_iter\_borne) et l'on passe à la direction suivante
 \end{itemize}
+Voici une petite illustration:
+
+\includegraphics[width=0.8\textwidth]{exemple.png}
+
+
+\section{Estimation du temps}
+
+J'ai estimé la réalisation en une journée (environs 7h-12h). Je me suis un peu
+surestimé, il m'a fallu une demi-journée en plus.
+
+Concernant la partie codage (sans compter la doc), d'après l'historique de
+mon dépôt, j'estime le temps réellement passé sur le 1h sur colimacon.c et
+une 30taine de minutes sur les demos et tests.
+
+Tout le reste est essentiellement passé dans toutes les fonctionnalité:
+makefile, doc, bench, rapport plein de fautes, schéma dégeux sur excel, latex
+qui dégénère et les sympathiques ifndef de makefile qui ne doivent pas être
+indenté dans les rules.
+
+\section{Choix et problémes}
+
+\begin{itemize}
+  \item Bien nommer les choses, ce n'est parfois pas évidant. Exemple:
+    avec un tableau 3x3: les valeurs lors de l'initilisation
+    des bornes sont: borne haute= -1 et borne basse=3 ça peux preter confusion
+    car haute\textless basse.
+  \item Le script de test, j'en suis particuliérmeent fière, je le resort à
+    chaque fois en projet de c. C'est un simple foreach sur chaque executable
+    de test avec la sortie standard redirigé vers un .out et procéde à un diff
+    sur le .expected.
+  \item J'ai eu des problémes à comprendre comment utiliser perf.
+  \item Le travaille de relecture... Parler à des gens quelle horreur!
+\end{itemize}
+
+
+\section{Prototype}
+
+Mon prototype:
+\begin{lstlisting}[frame=single]
+int ** colimacon(int line, int col);
+
+void delete_colimacon(int** table, int line, int col);
+\end{lstlisting}
+
+L'avantage est que la fonction d'occupe de
+l'allocation memoire, il n'y a donc pas de risque de l'utilisateur passe
+un tableau avec le nombre de ligne ou colonne qui ne correspondent pas.
+Le defaut est que du coup, pour le delete, il y a besoin du nombre
+de ligne et de colonnes.
+
+\begin{lstlisting}[frame=single]
+int colimacon (int ** tab, int line, int col)
+\end{lstlisting}
+
+Ce propotype est interessant car il permet de retourné une erreur par exemple.
+
+\section{Paralelisation}
+
+Le programme n'est pas dutout parralelisable, cependant avec quelques
+modification il est possible de le rendre sur chacune des directions.
+
+Il faudra cependant modifier quelques functions:
+\begin{lstlisting}[frame=single]
+static int _ecriture_direction(int** tab, struct borne* bor, int* val,
+  direction_t dir)
+\end{lstlisting}
+Devras travailler avec une bornes et un valeur en copie ce qui donnera:
+\begin{lstlisting}[frame=single]
+static int _ecriture_direction(int** tab, struct borne bor, int val,
+  direction_t dir)
+\end{lstlisting}
+
+Il faudra ajouter un fonction qui calcule l'incrementation des valeurs après
+chaque direction. Par exemple:
+\begin{lstlisting}[frame=single]
+int _iter_val(struct borne bor, direction_t dir)
+\end{lstlisting}
+
+Enfin dans la boucle de colimacon:
+
+\begin{lstlisting}[frame=single]
+  while(1) {
+
+    a lancer sur le thread 1:
+    _ecriture_direction(table, borne, valeur, DROITE)
+
+
+    valeur= _iter_val(bor, DROITE)
+    _iter_borne(bor, DROITE)
+
+
+    a lancer sur le thread 2:
+    _ecriture_direction(table, borne, valeur, BAS)
+
+
+    valeur= _iter_val(bor, BAS)
+    _iter_borne(bor, BAS)
+
+  [...]
+\end{lstlisting}
+
+Le crois qu'il faudra aussi faire de l'allocation en mémoire partagée.
+Globalement l'idée de l'algorithme est compatible avec une paralelisation.
+
+Cependant, il ne sera pas possible de remplir chaqu'une des cellules en
+parallèle, car il faudrait trouver un autre mécanisme que celui du curseur
+qui se déplace vers une direction.
+
+Pour conclure:
+Ecrire une rangée complete du tableau c'est possible en
+gardant la logique de l'algorithme
+Ecrire chacun des cellule du tableau ce n'est pas possible avec la logique de
+l'algorithme.
+
+
+
 
 \includepdf[pages=1-15]{refman.pdf}
 
 \end{document}
-              
+
