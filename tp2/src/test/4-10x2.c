@@ -1,3 +1,9 @@
+/**
+ * @file   src/test/4-10x2.c
+ * @author Jérôme SKODA <contact@jeromeskoda.fr>
+ * @date   Tue 17 Oct 2017 01:46:29 PM CEST
+ * @brief  Test 4
+ */
 #include "../colimacon/colimacon.h"
 #include <stdio.h>
 #include <stdlib.h>

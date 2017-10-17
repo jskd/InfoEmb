@@ -1,12 +1,18 @@
+/**
+ * @file   src/demo/6-colimacon-time.c
+ * @author Jérôme SKODA <contact@jeromeskoda.fr>
+ * @date   Tue 17 Oct 2017 01:46:29 PM CEST
+ * @brief  Demo 6
+ */
+
 #include "../colimacon/colimacon.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-    
 /**
  * @brief Programme de démonstration affichant le temps de génération
- *        Utilisation: colimacon [ligne] [col]  
+ *        Utilisation: colimacon [ligne] [col]
  */
 int main(int argc, char** argv)
 {

@@ -1,3 +1,9 @@
+/**
+ * @file   src/colimacon/colimacon.c
+ * @author Jérôme SKODA <contact@jeromeskoda.fr>
+ * @date   Tue 17 Oct 2017 01:46:29 PM CEST
+ * @brief  Colimaçon source
+ */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -133,7 +139,7 @@ static void _iter_borne( struct borne* borne, direction_t d) {
 
 /**
  * @brief Fonction de calcule de la positon initial pour remplir dans une direction
- * @param[in] borne 
+ * @param[in] borne
  * @param[in] direction
  * @return curseur
  */
@@ -162,7 +168,7 @@ static struct curseur _get_position_initiale(struct borne* borne, direction_t d)
 
 /**
  * @brief Calcule si l'ecriture est possible en fonction des bornes
- * @param[in] cur 
+ * @param[in] cur
  * @param[in] bor
  * @return si true alors ecriture possible
  */
@@ -174,9 +180,9 @@ static char _canWrite(struct curseur* cur, struct borne* bor) {
 /**
  * @brief Ecriture complete vers une direction
  * @param[in] tab tableau à remplir
- * @param[in] bor borne du tableau 
+ * @param[in] bor borne du tableau
  * @param[in] val valeur à entrer
- / @return si -1 aucune écriture sinon 0
+ * @return si -1 aucune écriture sinon 0
  */
 static int _ecriture_direction(int** tab, struct borne* bor, int* val,
   direction_t dir)

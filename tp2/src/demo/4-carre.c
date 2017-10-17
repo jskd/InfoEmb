@@ -1,3 +1,10 @@
+/**
+ * @file   src/demo/4-carre.c
+ * @author Jérôme SKODA <contact@jeromeskoda.fr>
+ * @date   Tue 17 Oct 2017 01:46:29 PM CEST
+ * @brief  Demo 4
+ */
+
 #include "../colimacon/colimacon.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,7 +13,7 @@ static const int _line= 10;
 static const int _col= 10;
 /**
  * @brief Programme de démonstration
- *        Taille 10x10    
+ *        Taille 10x10
  */
 int main(int argc, char** argv)
 {

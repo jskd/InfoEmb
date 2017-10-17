@@ -1,4 +1,11 @@
 /**
+ * @file   src/colimacon/colimacon.h
+ * @author Jérôme SKODA <contact@jeromeskoda.fr>
+ * @date   Tue 17 Oct 2017 01:46:29 PM CEST
+ * @brief  Colimaçon header
+ */
+
+/**
  * @brief Allocation d'un tableau et remplissage en colimacon
  * @param[in] line nombre de ligne
  * @param[in] col nombre de colonne
