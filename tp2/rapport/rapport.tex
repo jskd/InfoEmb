@@ -85,6 +85,21 @@ Les test disponible sont:
   \item  colimacon 1000x1000 (sans print)
 \end{itemize}
 
+
+\section{Fonctionnement}
+
+Le remplissage s'effectue avec un systeme de borne (voir struct borne) et de séquence de direction (voir direction\_t).
+
+Chacune des écriture sont faite dans un ordre de direction: DROITE puis BAS puis GAUCHE puis HAUT jusqu'à que le tableau soit remplis.
+
+L'écriture dans une direction fonctionne de cette manière suivante:
+\begin{itemize}
+  \item On calcule la position inital du curseur en fonction des borne et de la direction. (\_get\_position\_initiale)
+  \item On regarde si l'on peux ecrire dans la case calculé (\_canWrite)
+  \item S'il est possible d'écrire, on le fait puis on réitére l'operation en avançant le curseur d'une case à chaque fois (\_iter\_curseur) 
+  \item Enfin quand l'écriture n'est plus possible, on avance la borne en fonction de la direction d'écriture (\_iter\_borne) et l'on passe à la direction suivante
+\end{itemize}
+
 \includepdf[pages=1-15]{refman.pdf}
 
 \end{document}
