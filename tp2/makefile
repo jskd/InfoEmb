@@ -159,6 +159,18 @@ else
 endif
 endif
 
+bench: $(BIN_DEMO)
+ifndef echantillon
+	@echo "Utilisation: make bench echantillon=X fichier=X"
+else
+ifndef fichier
+	@echo "Utilisation: make bench echantillon=X fichier=X"
+else
+		@./script/bench.sh $(echantillon) >> $(fichier)
+		@echo "Bench terminé"
+endif
+endif
+
 #lib
 $(COLIMACON_STATIC): $(OBJECTS_COLIMACON)
 	@mkdir -p $(dir $@)
