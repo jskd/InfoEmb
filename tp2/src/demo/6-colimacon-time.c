@@ -43,7 +43,7 @@ int main(int argc, char** argv)
   delete_colimacon(table, line, col);
 
   total_t = (double)(end_t - start_t) / CLOCKS_PER_SEC;
-  printf("Temps: %f\n", total_t  );
+  printf("%f\n", total_t  );
 
   return 0;
 }

@@ -184,19 +184,17 @@ Enfin dans la boucle de colimacon:
     a lancer sur le thread 1:
     _ecriture_direction(table, borne, valeur, DROITE)
 
-
     valeur= _iter_val(bor, DROITE)
     _iter_borne(bor, DROITE)
-
 
     a lancer sur le thread 2:
     _ecriture_direction(table, borne, valeur, BAS)
 
-
     valeur= _iter_val(bor, BAS)
     _iter_borne(bor, BAS)
 
-  [...]
+    [...]
+  }
 \end{lstlisting}
 
 Le crois qu'il faudra aussi faire de l'allocation en mémoire partagée.
@@ -207,10 +205,18 @@ parallèle, car il faudrait trouver un autre mécanisme que celui du curseur
 qui se déplace vers une direction.
 
 Pour conclure:
-Ecrire une rangée complete du tableau c'est possible en
+Ecrire plusieurs rangée complete du tableau c'est possible en
 gardant la logique de l'algorithme
-Ecrire chacun des cellule du tableau ce n'est pas possible avec la logique de
+Ecrire chacune des cellule du tableau ce n'est pas possible avec la logique de
 l'algorithme.
+
+Remarque: Je ne vois pas trop l'intrêt de paralleliser toutes les cases car
+les mécanismes d'enregistrement et lancement de thread risque d'avoir une
+performance médiocre.
+
+\section{Paralelisation}
+
+
 
 
 
