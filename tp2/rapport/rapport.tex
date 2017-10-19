@@ -253,6 +253,48 @@ Voici le resultat sur 1 000 échantillons:
     \end{itemize}
 \end{itemize}
 
+\section{Accès mémoire}
+
+\begin{lstlisting}[frame=single]
+int ** colimacon(int line, int col);
+\end{lstlisting}
+
+Cette fonction accède 0 fois au tableau en lecture et N fois en écriture.
+
+\begin{lstlisting}[frame=single]
+void print_colimacon(int** table, int line, int col);
+\end{lstlisting}
+
+Cette fonction accède N fois au tableau en lecture et 0 fois en écriture.
+
+\section{Occupation mémoire}
+
+Sur le profilage de bin/test/7-1000x1000, on remarque que la plupart des écritures
+memoire s'effectue dans le cache L1 et qu'il n'y pas
+enormément de latance (3.85%).
+
+Concenrnat la lecture, la fonction \_can\_write a le plus de latance
+(11.29\% et 6.53\%) et utilise la pile.
+
+\_get\_position\_initiale utilise la pile
+\_ecritrue\_direction utilise le tas.
+
+Petit memo:
+\begin{lstlisting}[frame=single]
+sudo perf mem record bin/test/7-1000x1000
+sudo perf mem report
+\end{lstlisting}
+
+\includegraphics[width=1\textwidth]{mem-store-revert.png}
+
+\includegraphics[width=1\textwidth]{mem-loads-revert.png}
+
+
+\section{Relecture}
+
+Liang m'a dit qu'ils n'ont rien compris au code. Du coups, j'ai augmenté la documentation.
+Li Xiang m'a dit j'ai fait la même chose que lui sauf que mes fonctions auxilaire rendais le tout plus structuré.
+
 \includepdf[pages=1-15]{refman.pdf}
 
 \end{document}
