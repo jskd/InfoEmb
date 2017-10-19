@@ -12,6 +12,8 @@
 * __make demo-4__: Lancer la démo carr
 * __make demo-5 ligne=X col=X__ : Lancer la démo colimacon sans print (utile pour le bench)
 * __make demo-6 ligne=X col=X__ : Lancer la démo colimacon avec sortie temps (utile pour le bench)
+* __make tgz__: Creation de l'achive de rendu
+* __make bench echantillon=X fichier=X__: Generation des bench de temps pour le rapport.
 
 # Arborescence
 
@@ -27,6 +29,7 @@
   * __colimacon__   : Source de colimacon
   * __demo__  : Sources des differentes démonstrations d'utilisation
   * __test__  : Sources des dufferents tests
+* __bench__: Fichier de bench pour le rapport __
 
 * *sujet.pdf*  : Sujet du projet
 * *README.md*  : C'est moi

@@ -2,6 +2,7 @@
 
 CC=gcc
 CFLAGS= -Wall -Werror
+TGZ= Skoda_Jerome_TP2.tgz
 
 # Repertoire global
 SRCDIR     := src
@@ -170,6 +171,13 @@ else
 		@echo "Bench terminé"
 endif
 endif
+
+tgz:
+	@$(MAKE) clean
+	@rm -rf $(TGZ)
+	@tar -zcvf $(TGZ) .
+	@echo "Archive "$(TGZ)" créé!"
+
 
 #lib
 $(COLIMACON_STATIC): $(OBJECTS_COLIMACON)
