@@ -220,20 +220,38 @@ La mesure s'est effectué avec la commande make bench [nombre-d'échantillon]
 [fichier de sortie]
 
 Cette commande lance le script/bench.sh qui consite à faire la moyenne du temps
-d'execution bin/demo/6-colimacon-no-print sur n échantillons et aussi
-sur differente taille.
+d'execution de bin/demo/6-colimacon-no-print sur n échantillons et ce sur
+differente taille.
 
 Voici le resultat sur 1 000 échantillons:
 
+\begin{tabular}{|l|l|l|}
+  \hline
+  Taille & Laptop & Desktop \\
+  \hline
+  10x10 & 0.035371 ms & 0.021329 ms\\
+  \hline
+  100x100 & 0.209286 ms & 0.112920 ms \\
+  \hline
+  1000x1000 & 15.301931 ms & 7.218361ms \\
+  \hline
+  10000x10000 & 1.513250620s & .989898073s \\
+  \hline
+\end{tabular}
 
 
-
-Laptop:
-CPU: i5-2430M CPU @ 2.40GHz 2 cores 4 threads
-RAM: 16Go @ 1 600MHz
-Desktop:
-CPU: i7 4790K @ 4.3GHz 4 cores 8 threads
-RAM: 32Go @ 1 600MHz
+\begin{itemize}
+  \item Laptop:
+    \begin{itemize}
+      \item CPU: i5-2430M CPU @ 2.40GHz 2 cores 4 threads
+      \item RAM: 16Go @ 1 600MHz
+    \end{itemize}
+  \item Desktop:
+    \begin{itemize}
+      \item CPU: i7 4790K @ 4.3GHz 4 cores 8 threads
+      \item RAM: 32Go @ 1 600MHz
+    \end{itemize}
+\end{itemize}
 
 \includepdf[pages=1-15]{refman.pdf}
 
