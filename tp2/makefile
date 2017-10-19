@@ -175,7 +175,7 @@ endif
 tgz:
 	@$(MAKE) clean
 	@rm -rf $(TGZ)
-	@tar -zcvf $(TGZ) .
+	@tar -zcvf $(TGZ) *
 	@echo "Archive "$(TGZ)" créé!"
 
 
