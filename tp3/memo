@@ -1,0 +1,5 @@
+sudo apt-get install libncurses5-dev libncursesw5-dev
+
+make O=../linux-477-x86 allnoconfig 
+
+make O=../linux-477-x86 menuconfig  
