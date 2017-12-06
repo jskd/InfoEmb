@@ -24,7 +24,7 @@ run-explicit: $(EXEC_FILE)
 	taskset -c 0 $^ 0
 
 clean:
-	rm -rf */*.o */*.a */*.so
+	rm -rf */*.o
 
 mrproper: clean
 	rm -rf $(EXEC_FILE)
