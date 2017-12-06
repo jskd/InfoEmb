@@ -28,6 +28,7 @@ clean:
 
 mrproper: clean
 	rm -rf $(EXEC_FILE)
+	rm -rf $(TGZ)
 
 tar: clean
 	@rm -rf $(TGZ)
