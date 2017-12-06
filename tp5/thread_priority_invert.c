@@ -18,45 +18,47 @@
 
 static const int _schedpolicy= SCHED_FIFO;
 
-pthread_mutex_t verrou;
-sem_t sem1,sem2,sem3;
+pthread_mutex_t thread_lock;
+sem_t sem_hight,sem_medium,sem_low;
 
 int medium_executed = 0;
 int inversion = 0;
 
 void thread_hight()
 {
-  sem_wait(&sem1);
-  pthread_mutex_lock(&verrou);
-  printf("Thread_1 : HIGH Pritority\n");
-  sem_post(&sem3);
-  pthread_mutex_unlock(&verrou);
+  sem_wait(&sem_hight);
+  printf("Thread hight priority run.\n");
+  pthread_mutex_lock(&thread_lock);
+  sem_post(&sem_low);
+  pthread_mutex_unlock(&thread_lock);
   if(medium_executed) inversion = 1;
 }
 
 void thread_medium()
 {
-  sem_wait(&sem2);
-  pthread_mutex_lock(&verrou);
-  printf("Thread_2 : MEDIUM Pritority\n");
-  pthread_mutex_unlock(&verrou);
+  sem_wait(&sem_medium);
+  printf("Thread medium priority run.\n");
+  pthread_mutex_lock(&thread_lock);
+  pthread_mutex_unlock(&thread_lock);
   medium_executed = 1;
 }
 
 void thread_low()
 {
-  sem_wait(&sem3);
-  pthread_mutex_lock(&verrou);
-  printf("Thread_3 : LOW Pritority\n");
-  sem_post(&sem2);
-  sem_post(&sem1);
-  pthread_mutex_unlock(&verrou);
+  sem_wait(&sem_low);
+  printf("Thread low priority run.\n");
+  pthread_mutex_lock(&thread_lock);
+  sem_post(&sem_medium);
+  sem_post(&sem_hight);
+  pthread_mutex_unlock(&thread_lock);
 }
 
 
 static void _set_attr_param_thread(pthread_attr_t* attr, int priority,
   int policy, int inherit)
 {
+  pthread_attr_init(attr);
+
   struct sched_param param;
   param.sched_priority = priority;
   pthread_attr_setschedpolicy(attr, policy);
@@ -67,16 +69,12 @@ static void _set_attr_param_thread(pthread_attr_t* attr, int priority,
 
 char test_invert(int policy, int inherit) {
 
-  int priority_hight= sched_get_priority_max(policy);
-  int priority_low= sched_get_priority_min(policy);
+  int priority_hight= sched_get_priority_max(inherit);
+  int priority_low= sched_get_priority_min(inherit);
   int priority_medium= (priority_hight + priority_low)/2;
 
   pthread_t pid_hight, pid_low, pid_medium;
   pthread_attr_t attr_hight, attr_low, attr_medium;
-
-  pthread_attr_init(&attr_hight);
-  pthread_attr_init(&attr_low);
-  pthread_attr_init(&attr_medium);
 
   _set_attr_param_thread(&attr_hight,  priority_hight,  policy, inherit);
   _set_attr_param_thread(&attr_low,    priority_low,    policy, inherit);
@@ -99,11 +97,11 @@ char test_invert(int policy, int inherit) {
 int main(int argc, char* argv[])
 {
 
-  sem_init(&sem1, 0, 0);
-  sem_init(&sem2, 0, 0);
-  sem_init(&sem3, 0, 1);
+  sem_init(&sem_hight,  0, 0);
+  sem_init(&sem_medium, 0, 0);
+  sem_init(&sem_low,    0, 1);
 
-  pthread_mutex_init(&verrou, NULL);
+  pthread_mutex_init(&thread_lock, NULL);
 
   if(argc > 1)
     test_invert(_schedpolicy, PTHREAD_INHERIT_SCHED);
