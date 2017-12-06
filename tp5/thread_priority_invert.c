@@ -1,3 +1,9 @@
+/**
+ * @file   thread_priority_invert.c
+ * @brief  Programme pouvant produire une situation d'inversion de priorité
+ *         entre des thread pour le TP5 d'InfoEmb
+ * @auhtor Jérôme Skoda <contact@jeromeskoda.fr>
+ */
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
