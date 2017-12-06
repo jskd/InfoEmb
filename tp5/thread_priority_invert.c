@@ -1,6 +1,6 @@
 /**
  * @file   thread_priority_invert.c
- * @brief  Programme pouvant produire une situation d'_is_invert de priorité
+ * @brief  Programme pouvant produire une situation d'inversion de priorité
  *         entre des thread pour le TP5 d'InfoEmb
  * @auhtor Jérôme Skoda <contact@jeromeskoda.fr>
  */
@@ -17,59 +17,79 @@
 #include <ctype.h>
 #include <semaphore.h>
 
-
+// Config
 static const int _debug= 0;
 static const int _schedpolicy= SCHED_FIFO;
+static const int _detachstate= PTHREAD_CREATE_JOINABLE;
+
+// Var
 static int _medium_is_executed = 0;
 static int _is_invert = 0;
 
+// Synchronisation
+static pthread_mutex_t _thread_lock;
+static sem_t _sem_high, _sem_medium, _sem_low;
 
+// Pour afficher les erreur
 #define handle_error(error, msg) \
   { errno = error; perror(msg); exit(EXIT_FAILURE); }
 
-
-pthread_mutex_t thread_lock;
-sem_t sem_high,sem_medium,sem_low;
-
-
+/**
+ * @brief Thread de priorité haute, doit à priorie s'executer avant thread_medium
+ */
 void thread_high()
 {
-  sem_wait(&sem_high);
-  pthread_mutex_lock(&thread_lock);
+  sem_wait(&_sem_high);
+  pthread_mutex_lock(&_thread_lock);
 
   if(_debug) printf("Thread high priority run.\n");
-  sem_post(&sem_low);
+  sem_post(&_sem_low);
   if(_medium_is_executed) _is_invert = 1;
 
-  pthread_mutex_unlock(&thread_lock);
+  pthread_mutex_unlock(&_thread_lock);
   pthread_exit(0);
 }
-
+/**
+ * @brief Thread de priorité moyenne, doit à priorie s'executer après thread_high
+ */
 void thread_medium()
 {
-  sem_wait(&sem_medium);
-  pthread_mutex_lock(&thread_lock);
+  sem_wait(&_sem_medium);
+  pthread_mutex_lock(&_thread_lock);
 
   if(_debug) printf("Thread medium priority run.\n");
   _medium_is_executed = 1;
 
-  pthread_mutex_unlock(&thread_lock);
+  pthread_mutex_unlock(&_thread_lock);
   pthread_exit(0);
 }
 
+/**
+ * @brief Thread de priorité basse, débloque tout les autres thread
+ */
 void thread_low()
 {
-  sem_wait(&sem_low);
-  pthread_mutex_lock(&thread_lock);
+  sem_wait(&_sem_low);
+  pthread_mutex_lock(&_thread_lock);
 
   if(_debug) printf("Thread low priority run.\n");
-  sem_post(&sem_medium);
-  sem_post(&sem_high);
+  sem_post(&_sem_medium);
+  sem_post(&_sem_high);
 
-  pthread_mutex_unlock(&thread_lock);
+  pthread_mutex_unlock(&_thread_lock);
   pthread_exit(0);
 }
 
+/**
+ * @brief Parametrage des thread
+ * @param[out] attr Attribut en sortie
+ * @param[in]  priority
+ *             Utilisez sched_get_priority_max / min si vous avez un doute
+ * @param[in]  policy
+ *             Exemple: SCHED_RR ou SCHED_FIFO
+ * @param[in]  inherit
+ *             Exemple: PTHREAD_INHERIT_SCHED ou PTHREAD_EXPLICIT_SCHED
+ */
 static void _set_attr_param_thread(pthread_attr_t* attr, int priority,
   int policy, int inherit)
 {
@@ -79,10 +99,18 @@ static void _set_attr_param_thread(pthread_attr_t* attr, int priority,
   pthread_attr_setschedpolicy(attr, policy);
   pthread_attr_setschedparam(attr, &param);
   pthread_attr_setinheritsched(attr, inherit);
-  pthread_attr_setdetachstate(attr, PTHREAD_CREATE_JOINABLE);
+  pthread_attr_setdetachstate(attr, _detachstate);
 }
 
-char test_invert(int policy, int inherit) {
+/**
+ *  @brief Crée 3 threads de priorité differente afin de détecter une inversion
+ *         de priorité
+ *  @param[in] policy
+ *             Exemple: SCHED_RR ou SCHED_FIFO
+ *  @param[in] inherit
+ *             Exemple: PTHREAD_INHERIT_SCHED ou PTHREAD_EXPLICIT_SCHED
+ */
+void test_invert(int policy, int inherit) {
 
   pthread_t pid_high, pid_low, pid_medium;
   pthread_attr_t attr_high, attr_low, attr_medium;
@@ -92,7 +120,7 @@ char test_invert(int policy, int inherit) {
   int priority_low= sched_get_priority_min(inherit);
   int priority_medium= (priority_high + priority_low)/2;
 
-  _set_attr_param_thread(&attr_high,  priority_high,  policy, inherit);
+  _set_attr_param_thread(&attr_high,   priority_high,   policy, inherit);
   _set_attr_param_thread(&attr_low,    priority_low,    policy, inherit);
   _set_attr_param_thread(&attr_medium, priority_medium, policy, inherit);
 
@@ -123,17 +151,24 @@ char test_invert(int policy, int inherit) {
   pthread_attr_destroy(&attr_high);
   pthread_attr_destroy(&attr_low);
   pthread_attr_destroy(&attr_medium);
-
 }
 
+/**
+ *  @brief Ecrit "Inversion détectée" dans une situation d'inversion de priorité
+ *         de thread ou "Inversion non détectée" dans le cas contraire
+ *         S'il y a un argument, le scheduling s'effectura avec de l'héritage de
+ *         priorité (PTHREAD_INHERIT_SCHED) sinon de manière explicit
+ *         (PTHREAD_EXPLICIT_SCHED)
+ */
 int main(int argc, char* argv[])
 {
+  // Init semaphore
+  sem_init(&_sem_high,   0, 0);
+  sem_init(&_sem_medium, 0, 0);
+  sem_init(&_sem_low,    0, 1);
 
-  sem_init(&sem_high,  0, 0);
-  sem_init(&sem_medium, 0, 0);
-  sem_init(&sem_low,    0, 1);
-
-  pthread_mutex_init(&thread_lock, NULL);
+  // Init mutex
+  pthread_mutex_init(&_thread_lock, NULL);
 
   if(argc > 1)
     test_invert(_schedpolicy, PTHREAD_INHERIT_SCHED);
