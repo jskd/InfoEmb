@@ -116,8 +116,8 @@ void test_invert(int policy, int inherit) {
   pthread_attr_t attr_high, attr_low, attr_medium;
   int error;
 
-  int priority_high= sched_get_priority_max(inherit);
-  int priority_low= sched_get_priority_min(inherit);
+  int priority_high= sched_get_priority_max(policy);
+  int priority_low= sched_get_priority_min(policy);
   int priority_medium= (priority_high + priority_low)/2;
 
   _set_attr_param_thread(&attr_high,   priority_high,   policy, inherit);
