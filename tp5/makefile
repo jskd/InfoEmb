@@ -30,7 +30,7 @@ mrproper: clean
 	rm -rf $(EXEC_FILE)
 	rm -rf $(TGZ)
 
-tar: clean
+tar: mrproper
 	@rm -rf $(TGZ)
 	@tar -zcvf $(TGZ) *
 	@echo "Archive "$(TGZ)" créé!"
