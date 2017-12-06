@@ -4,6 +4,10 @@
  *         entre des thread pour le TP5 d'InfoEmb
  * @auhtor Jérôme Skoda <contact@jeromeskoda.fr>
  */
+
+// A ce qui paraît c'est utile
+ #define _GNU_SOURCE
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -12,11 +16,7 @@
 #include <time.h>
 #include <semaphore.h>
 
-#define _GNU_SOURCE
-
-#define PRIORITY_T1 30
-#define PRIORITY_T2 20
-#define PRIORITY_T3 10
+static const int _schedpolicy= SCHED_FIFO;
 
 pthread_mutex_t verrou;
 sem_t sem1,sem2,sem3;
@@ -24,7 +24,7 @@ sem_t sem1,sem2,sem3;
 int medium_executed = 0;
 int inversion = 0;
 
-void Thread1()
+void thread_hight()
 {
   sem_wait(&sem1);
   pthread_mutex_lock(&verrou);
@@ -34,7 +34,7 @@ void Thread1()
   if(medium_executed) inversion = 1;
 }
 
-void Thread2()
+void thread_medium()
 {
   sem_wait(&sem2);
   pthread_mutex_lock(&verrou);
@@ -43,7 +43,7 @@ void Thread2()
   medium_executed = 1;
 }
 
-void Thread3()
+void thread_low()
 {
   sem_wait(&sem3);
   pthread_mutex_lock(&verrou);
@@ -53,11 +53,51 @@ void Thread3()
   pthread_mutex_unlock(&verrou);
 }
 
+
+static void _set_attr_param_thread(pthread_attr_t* attr, int priority,
+  int policy, int inherit)
+{
+  struct sched_param param;
+  param.sched_priority = priority;
+  pthread_attr_setschedpolicy(attr, policy);
+  pthread_attr_setschedparam(attr, &param);
+  pthread_attr_setinheritsched(attr, inherit);
+}
+
+
+char test_invert(int policy, int inherit) {
+
+  int priority_hight= sched_get_priority_max(policy);
+  int priority_low= sched_get_priority_min(policy);
+  int priority_medium= (priority_hight + priority_low)/2;
+
+  pthread_t pid_hight, pid_low, pid_medium;
+  pthread_attr_t attr_hight, attr_low, attr_medium;
+
+  pthread_attr_init(&attr_hight);
+  pthread_attr_init(&attr_low);
+  pthread_attr_init(&attr_medium);
+
+  _set_attr_param_thread(&attr_hight,  priority_hight,  policy, inherit);
+  _set_attr_param_thread(&attr_low,    priority_low,    policy, inherit);
+  _set_attr_param_thread(&attr_medium, priority_medium, policy, inherit);
+
+  pthread_create(&pid_hight , &attr_hight,  (void *)thread_hight,  NULL);
+  pthread_create(&pid_low   , &attr_low,    (void *)thread_low,    NULL);
+  pthread_create(&pid_medium, &attr_medium, (void *)thread_medium, NULL);
+
+  pthread_join(pid_hight,  NULL);
+  pthread_join(pid_low,    NULL);
+  pthread_join(pid_medium, NULL);
+
+  pthread_attr_destroy(&attr_hight);
+  pthread_attr_destroy(&attr_low);
+  pthread_attr_destroy(&attr_medium);
+
+}
+
 int main(int argc, char* argv[])
 {
-  pthread_t ppid1,ppid2,ppid3;
-  struct sched_param param;
-  pthread_attr_t attr1,attr2,attr3;
 
   sem_init(&sem1, 0, 0);
   sem_init(&sem2, 0, 0);
@@ -65,49 +105,15 @@ int main(int argc, char* argv[])
 
   pthread_mutex_init(&verrou, NULL);
 
-  pthread_attr_init(&attr1);
-  pthread_attr_init(&attr2);
-  pthread_attr_init(&attr3);
+  if(argc > 1)
+    test_invert(_schedpolicy, PTHREAD_INHERIT_SCHED);
+  else
+    test_invert(_schedpolicy, PTHREAD_EXPLICIT_SCHED);
 
-  int policy;
-  if(argc > 1){
-      policy = PTHREAD_INHERIT_SCHED;
-  }else{
-      policy = PTHREAD_EXPLICIT_SCHED;
-  }
-
-  param.sched_priority = PRIORITY_T1;
-  pthread_attr_setschedpolicy(&attr1,SCHED_FIFO);
-  pthread_attr_setschedparam(&attr1,&param);
-  pthread_attr_setinheritsched(&attr1, policy);
-
-  param.sched_priority = PRIORITY_T2;
-  pthread_attr_setschedpolicy(&attr2,SCHED_FIFO);
-  pthread_attr_setschedparam(&attr2,&param);
-  pthread_attr_setinheritsched(&attr2, policy);
-
-  param.sched_priority = PRIORITY_T3;
-  pthread_attr_setschedpolicy(&attr3,SCHED_FIFO);
-  pthread_attr_setschedparam(&attr3,&param);
-  pthread_attr_setinheritsched(&attr3, policy);
-
-  pthread_create(&ppid1,&attr1,(void *)Thread1, NULL);
-  pthread_create(&ppid2,&attr2,(void *)Thread2, NULL);
-  pthread_create(&ppid3,&attr3,(void *)Thread3, NULL);
-
-  pthread_join(ppid1,NULL);
-  pthread_join(ppid2,NULL);
-  pthread_join(ppid3,NULL);
-
-  pthread_attr_destroy(&attr1);
-  pthread_attr_destroy(&attr2);
-  pthread_attr_destroy(&attr3);
-
-  if(inversion){
+  if(inversion)
     printf("%s\n", "Inversion détectée");
-  }else{
+  else
     printf("%s\n", "Inversion non détectée");
-  }
 
   return 0;
 }
