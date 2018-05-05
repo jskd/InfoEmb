@@ -1,4 +1,3 @@
 # InfoEmb
 
-TP1: 18/20
-TP2:
+* https://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=9826
